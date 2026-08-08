@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="page">
+  {{ with .Parent }}
+    {{ if not .IsHome }}
+      <a class="back-link" href="{{ .RelPermalink }}">← Back to {{ .Title }}</a>
+    {{ end }}
+  {{ end }}
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

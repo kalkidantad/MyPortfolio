@@ -1,0 +1,46 @@
+baseURL = 'https://kalkidantad.github.io/MyPortfolio/'
+languageCode = 'en-us'
+title = 'Kalkidan Tadesse'
+enableRobotsTXT = true
+canonifyURLs = false
+
+[params]
+  name = 'Kalkidan Tadesse Nigatu'
+  role = 'Research & Engineering'
+  affiliation = 'American College of Technology'
+  tagline = 'Building rigorous software systems with an academic focus on medical imaging, computer vision, climate intelligence, and interpretability.'
+  email = 'kalkidantadns1@gmail.com'
+  github = 'https://github.com/kalkidantad'
+  linkedin = 'https://www.linkedin.com/in/kt-in/'
+  substack = 'https://substack.com/@kalkidantadesse7'
+  cv = ''
+  description = 'Academic portfolio of Kalkidan Tadesse — research in medical imaging, computer vision, climate intelligence, and interpretability.'
+
+[menus]
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menus.main]]
+    name = 'Research'
+    pageRef = '/research'
+    weight = 20
+  [[menus.main]]
+    name = 'Education'
+    pageRef = '/education'
+    weight = 30
+  [[menus.main]]
+    name = 'Experience'
+    pageRef = '/experience'
+    weight = 40
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 50
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 60
+
+[markup.goldmark.renderer]
+  unsafe = true

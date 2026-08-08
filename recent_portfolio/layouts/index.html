@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-atmosphere" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-brand">{{ site.Params.name }}</p>
+      <h1>{{ site.Params.role }}</h1>
+      <p class="hero-lead">{{ site.Params.tagline }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ "/research/" | relURL }}">Explore research</a>
+        <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Contact</a>
+      </div>
+    </div>
+    {{ with resources.Get "images/kalkidan-tadesse-nigatu.jpg" }}
+      {{ $portrait := .Fill "560x700 q98 Lanczos" }}
+      {{ $portrait2x := .Fill "1120x1400 q98 Lanczos" }}
+      <figure class="hero-portrait">
+        <img
+          src="{{ $portrait2x.RelPermalink }}"
+          srcset="{{ $portrait.RelPermalink }} 560w, {{ $portrait2x.RelPermalink }} 1120w"
+          sizes="(max-width: 860px) 220px, min(28vw, 22rem)"
+          alt="{{ site.Params.name }}"
+          width="{{ $portrait2x.Width }}"
+          height="{{ $portrait2x.Height }}"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </figure>
+    {{ end }}
+  </div>
+</section>
+
+<section class="band" data-reveal>
+  <div class="band-head">
+    <h2>Selected work</h2>
+    <p>A short path through research interests, education, and projects.</p>
+  </div>
+  <div class="path-grid">
+    <a class="path-item" href="{{ "/research/" | relURL }}">
+      <span class="path-label">01</span>
+      <h3>Research</h3>
+      <p>Medical imaging, computer vision, climate intelligence, and interpretability.</p>
+    </a>
+    <a class="path-item" href="{{ "/education/" | relURL }}">
+      <span class="path-label">02</span>
+      <h3>Education</h3>
+      <p>{{ site.Params.affiliation }} and continuing certifications.</p>
+    </a>
+    <a class="path-item" href="{{ "/projects/" | relURL }}">
+      <span class="path-label">03</span>
+      <h3>Projects</h3>
+      <p>Flood intelligence, fintech analytics, and climate EDA.</p>
+    </a>
+  </div>
+</section>
+{{ end }}

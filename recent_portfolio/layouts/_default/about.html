@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="page">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    <p class="page-lead">{{ .Params.summary }}</p>
+  </header>
+  <p class="about-name">{{ site.Params.role }}</p>
+  <div class="about-layout">
+    <div class="about-statement prose">
+      {{ .Content }}
+    </div>
+    <aside class="skill-panel" aria-label="Skills">
+      <h2>Skills</h2>
+      <div class="skill-block">
+        <h3>Languages & stacks</h3>
+        <p>Python, PostgreSQL, TensorFlow, PyTorch, Flutter, Docker, Supabase, TypeScript</p>
+      </div>
+      <div class="skill-block">
+        <h3>Engineering practice</h3>
+        <p>IDEs, version control, testing and debugging workflows</p>
+      </div>
+      <div class="skill-block">
+        <h3>Focus</h3>
+        <p>Machine Learning, Data Science, and trustworthy web and mobile applications</p>
+      </div>
+    </aside>
+  </div>
+</article>
+{{ end }}

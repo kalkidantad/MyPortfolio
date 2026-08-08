@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-brand">{{ site.Params.name }}</p>
+    <p class="footer-meta">Academic portfolio · Built with Hugo · Hosted on GitHub Pages</p>
+    <div class="footer-links">
+      {{ with site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      {{ with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      {{ with site.Params.substack }}<a href="{{ . }}" target="_blank" rel="noopener">Substack</a>{{ end }}
+      {{ with site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+    </div>
+  </div>
+</footer>
