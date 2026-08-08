@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="page">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </header>
+  {{ with .Content }}
+    <div class="prose">{{ . }}</div>
+  {{ end }}
+  <div class="entry-list">
+    {{ range .Pages.ByWeight }}
+      <article class="entry">
+        <div class="entry-meta">
+          {{ with .Params.institution }}<span>{{ . }}</span>{{ end }}
+          {{ if or .Params.period .Params.start .Date .Params.end }}
+            <time{{ if not .Date.IsZero }} datetime="{{ .Date.Format "2006-01-02" }}"{{ end }}>
+              {{- with .Params.period -}}
+                {{ . }}
+              {{- else -}}
+                {{- with .Params.from }}{{ . }}{{ else }}{{ if not .Date.IsZero }}{{ .Date.Format "2006" }}{{ end }}{{ end -}}
+                {{- with .Params.end }} – {{ . }}{{ end -}}
+              {{- end -}}
+            </time>
+          {{ end }}
+        </div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+        {{ with .Params.tags }}
+          <ul class="tag-row">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        {{ end }}
+        {{ with .Params.external }}
+          <a class="text-link" href="{{ . }}" target="_blank" rel="noopener">Source code</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

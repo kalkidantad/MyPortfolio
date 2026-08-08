@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article class="page">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    <p class="page-lead">{{ .Params.summary }}</p>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ with site.Params.email }}
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/{{ . }}"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="Portfolio contact from {{ site.Params.name }}">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="contact-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label class="contact-field">
+        <span>Name</span>
+        <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+      </label>
+
+      <label class="contact-field">
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+      </label>
+
+      <label class="contact-field">
+        <span>Message</span>
+        <textarea name="message" rows="6" required placeholder="How can I help?"></textarea>
+      </label>
+
+      <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+  {{ end }}
+  <div class="contact-actions">
+    {{ with site.Params.linkedin }}
+      <a class="btn btn-ghost" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>
+    {{ end }}
+    {{ with site.Params.github }}
+      <a class="btn btn-ghost" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+    {{ end }}
+  </div>
+</article>
+{{ end }}
