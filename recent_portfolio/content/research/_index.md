@@ -1,6 +1,6 @@
 ---
 title: Research
-summary: Medical imaging, computer vision, climate intelligence, and interpretability.
+summary: Healthcare AI, Computer Vision, Computational Sustainability
 ---
 
-Current focus areas spanning volunteering, independent study, and collaboration.
+Current focus areas spanning volunteering, workshop, and collaboration.

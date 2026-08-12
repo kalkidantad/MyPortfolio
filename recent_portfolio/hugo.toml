@@ -8,13 +8,11 @@ canonifyURLs = false
   name = 'Kalkidan Tadesse Nigatu'
   role = 'Research & Engineering'
   affiliation = 'American College of Technology'
-  tagline = 'Building rigorous software systems with an academic focus on medical imaging, computer vision, climate intelligence, and interpretability.'
+  tagline = 'Building rigorous AI with an academic focus on health AI, computer vision, climate intelligence, and interpretability.'
   email = 'kalkidantadns1@gmail.com'
   github = 'https://github.com/kalkidantad'
   linkedin = 'https://www.linkedin.com/in/kt-in/'
-  substack = 'https://substack.com/@kalkidantadesse7'
-  cv = ''
-  description = 'Academic portfolio of Kalkidan Tadesse — research in medical imaging, computer vision, climate intelligence, and interpretability.'
+  description = 'Academic portfolio of Kalkidan Tadesse '
 
 [menus]
   [[menus.main]]
