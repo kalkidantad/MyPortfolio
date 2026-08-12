@@ -12,6 +12,7 @@ canonifyURLs = false
   email = 'kalkidantadns1@gmail.com'
   github = 'https://github.com/kalkidantad'
   linkedin = 'https://www.linkedin.com/in/kt-in/'
+  substack = 'https://substack.com/@kalkidantadesse7'
   description = 'Academic portfolio of Kalkidan Tadesse '
 
 [menus]

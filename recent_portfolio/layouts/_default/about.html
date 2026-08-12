@@ -1,10 +1,15 @@
 {{ define "main" }}
 <article class="page">
-  <header class="page-head">
+  <header class="page-head about-head">
     <h1>{{ .Title }}</h1>
-    <p class="page-lead">{{ .Params.summary }}</p>
+    <div class="about-head-row">
+      <p class="page-lead">{{ .Params.summary }}</p>
+      <div class="language-proficiency">
+        <h2>Language proficiency</h2>
+        <p>Amharic - Native · English - Fluent</p>
+      </div>
+    </div>
   </header>
-  <p class="about-name">{{ site.Params.role }}</p>
   <div class="about-layout">
     <div class="about-statement prose">
       {{ .Content }}
@@ -12,7 +17,7 @@
     <aside class="skill-panel" aria-label="Skills">
       <h2>Skills</h2>
       <div class="skill-block">
-        <h3>Languages & stacks</h3>
+        <h3>Languages &amp; stacks</h3>
         <p>Python, PostgreSQL, TensorFlow, PyTorch, Flutter, Docker, Supabase, TypeScript</p>
       </div>
       <div class="skill-block">

@@ -481,6 +481,37 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.about-head {
+  max-width: none;
+}
+
+.about-head-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 1.35fr);
+  gap: 1.75rem 2rem;
+  align-items: start;
+}
+
+.about-head-row .page-lead {
+  max-width: 38rem;
+}
+
+.language-proficiency h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.language-proficiency p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  opacity: 0.86;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(17rem, 1.35fr);
@@ -553,7 +584,7 @@ a:hover {
 
 .skill-panel {
   padding: 1.4rem 1.35rem;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(6px);
@@ -730,7 +761,8 @@ html.is-ready .hero-copy {
 
 @media (max-width: 860px) {
   .path-grid,
-  .about-layout {
+  .about-layout,
+  .about-head-row {
     grid-template-columns: 1fr;
   }
 
