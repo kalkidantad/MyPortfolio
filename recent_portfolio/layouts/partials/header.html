@@ -1,5 +1,5 @@
 <header class="site-header">
-  <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.name }}</a>
+  <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Params.name }}</a>
   <nav class="site-nav" aria-label="Primary">
     <ul>
       {{ range site.Menus.main }}
