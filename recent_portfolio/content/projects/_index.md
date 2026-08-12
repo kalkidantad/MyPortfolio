@@ -1,4 +1,4 @@
 ---
 title: Projects
-summary: Pinned engineering and research projects from GitHub.
+summary: Pinned analysis and research projects from GitHub.
 ---
